@@ -1,0 +1,227 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+import image1 from '~/assets/images/dajhorsa/dajhorsa_group.webp';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Sobre Nosotros"
+    image={{
+      src: '~/assets/images/dajhorsa/dajhorsa_group.webp',
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      Servicios Contables <br />
+      <span class="text-accent dark:text-white highlight"> A medida de su negocio</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Nos encargamos de toda la gestión fiscal de su empresa en Perú, ayudándole a cumplir con todas sus obligaciones tributarias mientras optimizamos su carga impositiva.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Nuestras Estadísticas"
+    stats={[
+      { title: 'Clientes Activos', amount: '+132' },
+      { title: 'Clientes Satisfechos', amount: '99.90%' },
+      { title: 'Mejoras', amount: '60%' },
+      { title: 'Años de Experiencia', amount: '+20' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Nuestros Principales Servicios"
+    subtitle="En DAJHORSA brindamos los mejores servicios contables a pequeñas, medianas y grandes empresas del Perú."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'Asesoría Contable y Tributaria',
+        description:
+          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Asesoría Laboral',
+        description:
+          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Asesoría Financiera',
+        description:
+          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Impuestos, mensuales y anuales.',
+        description: "Nos encargamos de presentar las declaraciones mensuales y anuales dentro de los plazos establecidos por la SUNAT.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Declaracion de Planillas',
+        description:
+          "Realizamos el llenado y las declaraciones del PDT PLAME e impuetos y trámites relacionados a ésta.",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Declaracion de SIRE',
+        description:
+          'Estamos pendientes de los cambios y regulaciones de la SUNAT, por ello realizamos las presentaciones de SIRE y otras declaraciones.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Conciliaciones Bancarias',
+        description:
+          "Para un mejor control de sus ingresos y gastos nos encargamos de las conciliaciones bancarias de sus compras y ventas con los estados financieros bancarios.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Estados Financieros',
+        description:
+          'Realizamos Estados Financieros anuales y con cortes mensuales, bimestrales, trimestrales o según lo requiera nuestros clientes.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Elaboración de Documentos',
+        description: 'También elaboramos documentos contables y legales, según lo requiera nuestros clientes.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Colorful Image',
+    }}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Nuestra Misión"
+    subtitle="Nos enfocamos en garantizar el cumplimiento normativo y proporcionar información clara y confiable, ayudando a las empresas a tomar decisiones estratégicas que impulsen su crecimiento."
+    items={[
+      {
+        title: 'Soluciones Eficaces',
+        description:
+          'Facilitar la administración financiera de empresas mediante soluciones contables precisas y servicios tributarios que minimicen riesgos, garantizando una gestión eficiente y adaptada a cada necesidad empresarial.',
+      },
+      {
+        title: 'Confiabilidad en los Procesos',
+        description:
+          'Proveer servicios contables y tributarios confiables que simplifiquen la toma de decisiones, entregando informes claros y oportunos para apoyar el crecimiento sostenible de nuestros clientes.',
+      },
+      {
+        title: 'Liderazgo Contable',
+        description:
+          'Liderar el sector contable y tributario en Perú, construyendo relaciones duraderas con nuestros clientes, basadas en la confianza, excelencia profesional y compromiso con sus objetivos de crecimiento.',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Nuestros Valores"
+    subtitle="Actuamos con ética y transparencia en cada proceso, garantizando que nuestras acciones y decisiones se alineen con los principios legales y morales. Nos comprometemos a ser honestos con nuestros clientes, brindando información clara y confiable."
+    isReversed={true}
+    hasImage={true}
+    image={image1.src}
+    callToAction={{
+      text: 'See more',
+      // href: '/',
+    }}
+    items={[
+      {
+        title: 'Responsabilidad',
+        description: 'Entendemos la importancia de la precisión en los servicios contables y tributarios. Por ello, aseguramos el cumplimiento normativo y asumimos el impacto de nuestras decisiones con seriedad, tanto para nuestros clientes como para la sociedad.',
+      },
+      {
+        title: 'Trabajo en equipo',
+        description:
+          'Fomentamos una cultura de colaboración entre nuestro equipo y con nuestros clientes. Creemos que el trabajo conjunto genera mejores resultados, facilitando la creación de estrategias que promuevan el crecimiento empresarial.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Excelencia',
+        description:
+          'En DAJHORSA nos esforzamos por superar las expectativas mediante un servicio de calidad. Mantenemos una cultura de mejora continua, actualizándonos constantemente para responder a los cambios normativos y ofrecer soluciones innovadoras.',
+        icon: 'tabler:award',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <!-- <Features2
+    title="Our locations"
+    tagline="Find us"
+    columns={4}
+    items={[
+      {
+        title: 'EE.UU',
+        description: '1234 Lorem Ipsum St, 12345, Miami',
+      },
+      {
+        title: 'Spain',
+        description: '5678 Lorem Ipsum St, 56789, Madrid',
+      },
+      {
+        title: 'Australia',
+        description: '9012 Lorem Ipsum St, 90123, Sydney',
+      },
+      {
+        title: 'Brazil',
+        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+      },
+    ]}
+  /> -->
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="¿Desea Adquirir nuestros Servicios?"
+    tagline="Contáctanos"
+    columns={2}
+    items={[
+      {
+        title: 'Chatea con Nosotros',
+        description:
+          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Llámanos Ahora',
+        description:
+          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>

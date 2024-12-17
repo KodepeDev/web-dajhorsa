@@ -1,0 +1,219 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Services',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Servicios"
+    title="Soluciones Contables para su Empresa"
+    subtitle="Explora todas nuestras especialidades, todos los servicios a los que nos dedicamos ofrecer a empresas desde el comienzo de constitucion hasta empresas que ya tienen tiempo en las actividades que desarrollan."
+    actions={[{ variant: 'primary', text: 'Empezar explorar', href: '#servicios' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'AstroWind Hero Image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id='servicios'
+    title="Explore la variedad de nuestros servicios"
+    subtitle="Brindamos gran variedad de servicios contables, nos especializamos en gestionar procesos contables desde la constitución de una empresa."
+    columns={3}
+    items={[
+      {
+        title: 'Impuestos, mensuales y anuales.',
+        description:
+          'Nos encargamos de presentar las declaraciones mensuales y anuales dentro de los plazos establecidos por la SUNAT.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Declaracion de Planillas',
+        description:
+          'Realizamos el llenado y las declaraciones del PDT PLAME e impuetos y trámites relacionados a ésta.',
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Declaracion de SIRE',
+        description: `Estamos pendientes de los cambios y regulaciones de la SUNAT, por ello realizamos las presentaciones de SIRE y otras declaraciones.`,
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Conciliaciones Bancarias',
+        description:
+          'Para un mejor control de sus ingresos y gastos nos encargamos de las conciliaciones bancarias de sus compras y ventas con los estados financieros bancarios.',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Estados Financieros',
+        description:
+          'Realizamos Estados Financieros anuales y con cortes mensuales, bimestrales, trimestrales o según lo requiera nuestros clientes.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Elaboración de Documentos',
+        description:
+          'También elaboramos documentos contables y legales, según lo requiera nuestros clientes.',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Fraccionamiento de Deudas',
+        description:
+          'Si viene por primera vez a <span class="font-semibold tagline">Grupo Dajhorsa</span> nos encargamos de fraccionar sus deudas, y le ayudamos en toda la documentacion que requiera para poder saldar sus deudas ante la SUNAT.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Atención a Fiscalizaciones',
+        description: `En caso la SUNAT establesca que su empresa necesita una revision por parte de la SUNAT, nos encargamos de presentar los requerimientos dentro de la fecha limite impuesta por la SUNAT.',
+        icon: 'flat-color-icons:business-contact`,
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Asesoría Legal',
+        description:
+          'Realizamos atención a situaciones legales de su empresa, puede contar con <span class="font-semibold tagline">Grupo Dajhorsa</span> para ayudarlo en cualquier caso legal.',
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Alta Calidad de Servicios',
+        description:
+          'Nuestros profesionales estan altamente capacitados para brindarle las mejores soluciones contables.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'Asesoría Personalizadas',
+        description:
+          'Siempre le atendemos todas las dudas que tenga sobre temas contables y legales de forma personalizada tanto presencial como también mediante nuestros canales digitales.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Optimización de Procesos',
+        description:
+          'Le ayudamos en agilizar sus procesos contables para que no tenga preoucpaciones relacionadas con tributos de SUNAT y otras entidades.',
+        icon: 'tabler:presentation',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: 'Features Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Principales Caráteristicas</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Ahorro de tiempo',
+        description:
+          'Le ahorramos el tiempo y esfuerzo dedicado a los procesos contables, para que se dedique a lo que realmente necesite en su negocio.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Profesionales con Experiencia',
+        description:
+          'Garantizamos el excelente servicio que brindamos, con la ayuda de nuestros profesionales dejará de preocupase por las multas y sanciones por parte de la SUNAT.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Rentabilidad',
+        description:
+          'Benefíciese del ahorro de costos al evitar la necesidad de contratar un contador interno, ya que nuestros contadores se encargan de todo el proceso, y los costos a pagar por los servicios son mucho menores.',
+        icon: 'tabler:coin',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Benefits Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Beneficios en <span class="font-semibold tagline">Grupo Dajhorsa</span></h3>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Comentarios de algunos Clientes"
+    testimonials={[
+      {
+        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
+        name: 'Emily Kennedy',
+        job: 'Front-end developer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Emily Kennedy Image',
+        },
+      },
+      {
+        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
+        name: 'Sarah Hansen',
+        job: 'Photographer',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Sarah Hansen Image',
+        },
+      },
+      {
+        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+        name: 'Mark Wilkinson',
+        job: 'Small business owner',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+    ]}
+    
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title='Inicia tu contabilidad con <span class="tagline highlight">DAJHORSA</span>'
+    subtitle='Solicita gratis una cotización o contáctenos para brindarle mayor información sobre nuestros servicios.'
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contactar Ahora',
+        href: '/contacto',
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+      waste more time! :P
+    </Fragment>
+  </CallToAction>
+</Layout>

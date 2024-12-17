@@ -2,9 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --aw-color-primary: @apply bg-orange-400;
+    /* ... */
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--aw-color-bg-page);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-orange-400;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 @layer utilities {
   .bg-page {
     background-color: var(--aw-color-bg-page);
+  }
+  .main-hero {
+    @apply bg-blue-400;
+  }
+  .bg-section {
+    @apply bg-yellow-500 dark:bg-black;
   }
   .bg-dark {
     background-color: var(--aw-color-bg-page-dark);
@@ -15,8 +49,26 @@
   .text-page {
     color: var(--aw-color-text-page);
   }
+  .text-accent {
+    @apply text-orange-500;
+  }
+  .tagline {
+    @apply dark:text-orange-500 text-[#303747];
+  }
+  .text-default {
+    color: var(--aw-color-text-default);
+  }
   .text-muted {
     color: var(--aw-color-text-muted);
+  }
+  .primary-theme {
+    background-color: var(--aw-color-bg-page);
+  }
+}
+
+@layer components {
+  .svg-fill{
+    @apply fill-yellow-500 dark:fill-black transition-none top-0;
   }
 }
 

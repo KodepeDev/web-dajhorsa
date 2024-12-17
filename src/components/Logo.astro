@@ -1,9 +1,7 @@
 ---
-import { SITE } from 'astrowind:config';
+import logo from '~/assets/images/dajhorsa/logo_dajhorsa.webp';
+import logo2 from '~/assets/images/dajhorsa/logo_dajhorsa_dark.webp';
 ---
 
-<span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🚀 {SITE?.name}
-</span>
+<img src={logo.src} alt="Logo Dajhrosa" class="inline-block dark:hidden w-24 mx-auto">
+<img src={logo2.src} alt="Logo Dajhrosa" class="hidden dark:inline-block w-24 mx-auto">

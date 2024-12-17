@@ -1,19 +1,20 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
+// import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+// import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Dajhorsa — Servicios contables para micro, pequeñas y grandes empresas en Perú',
   ignoreTitleTemplate: true,
 };
 ---
@@ -21,121 +22,154 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
+  <!-- <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
+        text: 'Conócenos',
         href: 'https://github.com/onwidget/astrowind',
         target: '_blank',
         icon: 'tabler:download',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Leer Más', href: '#servicios', variant: 'secondary' },
     ]}
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS
+      Soluciones
+      <span class="text-accent highlight"> Contables</span> Personalizadas para tu Negocio
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+        Somos <span class="font-semibold text-blue-600">Grupo Dajhorsa</span>, brindamos soluciones a Micro, Pequeña y Grandes Empresas de cualquier rubro.</span
+      >Nuestro equipo de profesionales está comprometido con brindarte un servicio personalizado que te permita concentrarte en el crecimiento de tu negocio, mientras nos encargamos de tu contabilidad y asesoría financiera.
     </Fragment>
-  </Hero>
+  </Hero> -->
+
+  <Hero2
+    tagline="Grupo Dajhorsa"
+    title='Soluciones <span class="text-accent highlight"> Contables</span> Personalizadas para tu Negocio'
+    subtitle='Brindamos soluciones a Micro, Pequeña y Grandes Empresas de cualquier rubro. Nuestro equipo de profesionales está comprometido con brindarte un servicio personalizado que te permita concentrarte en el crecimiento de tu negocio, mientras nos encargamos de tu contabilidad y asesoría financiera.'
+    actions={[
+      { variant: 'primary', text: 'Conócenos', href: '/sobre-nosotros', icon: 'tabler:square-rounded-arrow-right' },
+      { text: 'Leer Más', href: '#servicios', variant: 'secondary' },
+    ]}
+    image={{
+      src: '~/assets/images/hero_dajhorsa.png',
+      alt: 'Store with a Coming Soon sign. Pre-launch Landing Page',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute main-hero inset-0 top-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1594732832278-abd644401426?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+      </div>
+      <div class="relative min-h-full rotate-180 mt-1">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="svg-fill"></path>
+          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="svg-fill"></path>
+          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="svg-fill"></path>
+      </svg>
+      </div>
+    </Fragment>
+  </Hero2>
 
   <!-- Note Widget ******************* -->
 
-  <Note />
+  <!-- <Note /> -->
 
   <!-- Features Widget *************** -->
 
   <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    id="servicios"
+    tagline="Servicios"
+    title="¿Cuales son Nuestros Servicios?"
+    subtitle="En DAJHORSA, ofrecemos una amplia gama de servicios para satisfacer todas tus necesidades contables y fiscales."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Contabilidad General',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          'Mantenemos los registros financieros de tu empresa de manera precisa y eficiente. Nos aseguramos de que tus datos contables sean precisos y confiables para que puedas tomar decisiones informadas sobre el estado de tu negocio',
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Asesoría Tributaria',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          'Te ayudamos a optimizar tu carga fiscal cumpliendo con todas las normativas peruanas.Te ayudamos a optimizar tu carga fiscal cumpliendo con todas las normativas peruanas.',
         icon: 'tabler:components',
       },
       {
-        title: 'Best Practices',
+        title: 'Auditoría Financiera',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+          'Evaluamos el estado financiero de tu negocio para mejorar la transparencia y confianza.',
         icon: 'tabler:list-check',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Planificación Fiscal',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'Diseñamos estrategias fiscales personalizadas para maximizar el ahorro en impuestos.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Estado Finacieros',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+          "Generamos estados financieros contables, como el balance general, estado de resultados, estado de flujo de efectivo y estado de cambios en el patrimonio neto.",
         icon: 'tabler:arrows-right-left',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Libros Electrónicos	y SIRE',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+          'Ralizamos las validaciones de los comprobantes contables y presentamos los Libros Electrónicos y el SIRE de manera óptima.',
         icon: 'tabler:bulb',
       },
     ]}
-  />
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-section"></div>
+  </Fragment>
+  </Features>
 
   <!-- Content Widget **************** -->
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="Contable"
+    title="Outsourcing Contable y Tributario"
     items={[
       {
-        title: 'Built on top of Astro 4.0',
+        title: 'Registros de comprobantes de compra y venta',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'Llevamos un control preciso de todas tus facturas, boletas y notas de crédito para asegurar el cumplimiento con la SUNAT y mantener tus operaciones organizadas.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Cálculo de impuestos',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'Optimizamos el cálculo de IGV, Impuesto a la Renta y otros tributos para que pagues solo lo justo, evitando sanciones y aprovechando beneficios fiscales.',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Declaraciones mensuales de IGV y Renta',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'Presentamos tus declaraciones mensuales ante la SUNAT de manera puntual y sin errores, manteniendo tu empresa al día con las obligaciones tributarias.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+      src: '~/assets/images/dajhorsa/dajhorsa_z.webp',
+      alt: 'Dajhorsa Servicios Contables',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Contabilidad Externa</h3>
+      Brindamos una ampla variedad de servicios contables para empresas de todo rubro, desde empresas que recién estan iniciando hasta empresas grandes.
     </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="relative min-h-full">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="svg-fill"></path>
+          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="svg-fill"></path>
+          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="svg-fill"></path>
+      </svg>
+      </div>
     </Fragment>
   </Content>
 
@@ -145,40 +179,44 @@ const metadata = {
     isAfterContent
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Declaracón mensual de PDT Plame',
+        description: `Nos encargamos de presentar tus declaraciones laborales mensuales de manera puntual y precisa, garantizando el cumplimiento con las obligaciones ante la SUNAT y evitando problemas legales para tu empresa.`,
       },
       {
-        title: 'Multiple layout possibilities',
+        title: 'Cáculo de Liquidaciones',
         description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+          'Realizamos el cálculo detallado de liquidaciones laborales para asegurar que cada pago final sea justo y conforme a la normativa vigente, cuidando tanto a la empresa como a los colaboradores.',
       },
       {
-        title: 'Fully responsive design',
+        title: 'Generación de boletas de pago',
         description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
+          "Emitimos boletas de pago claras y precisas para tus trabajadores, asegurando transparencia y orden en tus procesos de remuneración.",
+      }
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
+      src: '~/assets/images/dajhorsa/dajhorsa_o.webp',
+      alt: 'Dajhorsa Servicios Contables de Planilla',
     }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Contabilidad de Planillas</h3>
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="relative min-h-full rotate-180">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="svg-fill"></path>
+          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="svg-fill"></path>
+          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="svg-fill"></path>
+      </svg>
+      </div>
     </Fragment>
   </Content>
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     isReversed
     isAfterContent
     items={[
@@ -212,153 +250,166 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="¿Aún no tiene una Empresa? ¡Le mostramos como podría constituir rápidamente una!"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Paso 1: <span class="font-medium">Nombre y Actividad</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          "Para comenzar, es fundamental tener claro el nombre de su negocio. Prepare al menos 3 posibles nombres o variaciones para asegurarse de que al menos uno esté disponible. Además, defina el giro de negocio y todas las actividades que abarcará para establecer una base sólida para su empresa.",
+        icon: 'tabler:a-b',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Paso 2: <span class="font-medium">Tipo de Constitución</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          "Elija el tipo de constitución que mejor se adapte a su negocio en Perú: EIRL (Empresa Individual de Responsabilidad Limitada), S.A.C. (Sociedad por Anónima Cerrada), S.A. (Sociedad Anónima), S.R.L. (Sociedad de Responsabilidad Limitada), S.A. de C.V. (Sociedad Anónima de Capital Variable) o cooperativa.",
+        icon: 'tabler:arrow-ramp-right-2',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Paso 3: <span class="font-medium">Pago y Firmas</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Complete el proceso legal con los pagos y firmas necesarios para formalizar su constitución empresarial, asegurándose de que toda la documentación cumpla con los requisitos establecidos por las autoridades correspondientes.',
+        icon: 'tabler:currency-dollar',
       },
       {
-        title: 'Ready!',
+        title: 'Ya todo esta listo para iniciar!',
         icon: 'tabler:check',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src: '~/assets/images/dajhorsa/dajhorsa_an.webp',
       alt: 'Steps image',
     }}
-  />
+  >
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-section"></div>
+  </Fragment>
+</Steps>
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="Todas las Actividades que Desarrollamos"
+    subtitle="Los servicios antes presentados son generales, en esta sección listamos a todo lo que abarcamos."
+    tagline="Lo que abarcamos"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        title: 'Impuestos, mensuales y anuales.',
+        description: "Nos encargamos de presentar las declaraciones mensuales y anuales dentro de los plazos establecidos por la SUNAT.",
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Heros',
+        title: 'Declaracion de Planillas',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+          "Realizamos el llenado y las declaraciones del PDT PLAME e impuetos y trámites relacionados a ésta.",
         icon: 'flat-color-icons:gallery',
       },
       {
-        title: 'Features',
+        title: 'Declaracion de SIRE',
         description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+          'Estamos pendientes de los cambios y regulaciones de la SUNAT, por ello realizamos las presentaciones de SIRE y otras declaraciones.',
         icon: 'flat-color-icons:approval',
       },
       {
-        title: 'Content',
+        title: 'Conciliaciones Bancarias',
         description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+          "Para un mejor control de sus ingresos y gastos nos encargamos de las conciliaciones bancarias de sus compras y ventas con los estados financieros bancarios.",
         icon: 'flat-color-icons:document',
       },
       {
-        title: 'Call-to-Action',
+        title: 'Estados Financieros',
         description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+          'Realizamos Estados Financieros anuales y con cortes mensuales, bimestrales, trimestrales o según lo requiera nuestros clientes.',
         icon: 'flat-color-icons:advertising',
       },
       {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+        title: 'Elaboración de Documentos',
+        description: 'También elaboramos documentos contables y legales, según lo requiera nuestros clientes.',
         icon: 'flat-color-icons:currency-exchange',
       },
       {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        title: 'Fraccionamiento de Deudas',
+        description: 'Si viene por primera vez a <span class="font-semibold text-blue-600">Grupo Dajhorsa</span> nos encargamos de fraccionar sus deudas, y le ayudamos en toda la documentacion que requiera para poder saldar sus deudas ante la SUNAT.',
         icon: 'flat-color-icons:voice-presentation',
       },
       {
-        title: 'Contact',
+        title: 'Atención a Fiscalizaciones',
         description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+          'En caso la SUNAT establesca que su empresa necesita una revision por parte de la SUNAT, nos encargamos de presentar los requerimientos dentro de la fecha limite impuesta por la SUNAT.',
         icon: 'flat-color-icons:business-contact',
       },
       {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+        title: 'Asesoría Legal',
+        description: 'Realizamos atención a situaciones legales de su empresa, puede contar con <span class="font-semibold text-blue-600">Grupo Dajhorsa</span> para ayudarlo en cualquier caso legal.',
         icon: 'flat-color-icons:database',
       },
     ]}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent">
+        <div class="relative min-h-full">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="svg-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="svg-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="svg-fill"></path>
+        </svg>
+        </div>
+      </div>
     </Fragment>
   </Features2>
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <BlogLatestPosts
+  <!-- <BlogLatestPosts
     title="Find out more content in our Blog"
     information={`The blog is used to display AstroWind documentation.
                         Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
                         Astro is a very interesting technology. Thanks.
                 `}
-  />
+  /> -->
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    title="Preguntas Frecuentes"
+    subtitle="¡<span class='text-accent highlight'>DAJHORSA</span> Su Socio Estratégico en Finanzas y Contabilidad!"
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: '¿Por qué elegir Dajhorsa?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "Somos la mejor opción al elegir una contabilidad externa para su empresa, le brindaremos todas las soluciones contables y nuestros profesionales están altamente capacitados para brindale el mejor servicio.",
       },
       {
-        title: 'What do I need to start?',
+        title: '¿Dónde estan ubicados?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'Nos ubicamos en Lima, Perú. Nuestra dirección exacta es Jr. Las Cidras 1233 Urb. Los Jardines - San Juan de Lurigancho - Lima.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: '¿Cómo puedo empezar?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "Si ya cuentas con una empresa y desea que nos encaguemos de la parte contable, tendría que comunicar al uno de los número de la sección contacto para coordinar el proceso para iniciar. De otro modo si aun no cuenta con una empresa constituida, se tendria que hacer el trámite de constitución, igualmente nuestros asesores le guiarán en todo el proceso.",
       },
       {
-        title: "What's something that you don't understand?",
+        title: "¿Atienden a empresas de provincia?",
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          "La distancia no es nuestros obstáculo, asi que si usted tiene un negocio en otro lugar que no sea cercano a nuestra oficina tenemos soluciones digitales para la comunicación y coordinacion de todos los servicio que le brindamos.",
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: '¿Cuánto es el costo por llevar la contabilidad de mi empresa?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          "El costo es algo que varía segun el rubro, tamaño, ubicaión, etc de su empresa, por lo que este sería calculado mediante una cotización previa coordinación con el cliente.",
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: '¿Qué pasa si tengo deudas en mi empresa?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          "¡Lo ayudamos en la solución! Nos encargamos de fraccionar sus deudas, y le ayudamos en toda la documentacion que requiera para poder saldar sus deudas ante la SUNAT.",
       },
     ]}
   />
@@ -367,23 +418,25 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      { title: 'Clientes Activos', amount: '+132' },
+      { title: 'Clientes Satisfechos', amount: '99.90%' },
+      { title: 'Mejoras', amount: '60%' },
+      { title: 'Años de Experiencia', amount: '+20' },
     ]}
   />
 
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
+    title='Inicia tu contabilidad con <span class="text-accent highlight">DAJHORSA</span>'
+    subtitle='Solicita gratis una cotización o contáctenos para brindarle mayor información sobre nuestros servicios.'
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
+        text: 'Contactar Ahora',
         href: 'https://github.com/onwidget/astrowind',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:phone',
       },
     ]}
   >
