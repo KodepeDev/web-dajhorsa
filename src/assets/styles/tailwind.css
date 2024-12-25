@@ -64,6 +64,20 @@
   .primary-theme {
     background-color: var(--aw-color-bg-page);
   }
+  .logo-dajhorsa::after {
+    content: 'beta';
+    top: 10px;
+    text-align: center;
+    vertical-align: middle;
+    left: 150px;
+    display: inline-block;
+    border-radius: 10px;
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    font-size: 10px;
+    background-color: orange;
+  }
 }
 
 @layer components {

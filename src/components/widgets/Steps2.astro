@@ -12,7 +12,6 @@ const {
   callToAction = await Astro.slots.render('callToAction'),
   items = [],
   isReversed = false,
-  hasImage = false,
   image,
 
   id,
@@ -37,7 +36,7 @@ const {
         }}
       />
       <div>
-        {hasImage && image ? (
+        {image ? (
           <img 
             src={image} 
             alt="Imagen cargada" 
